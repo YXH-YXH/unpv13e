@@ -3,9 +3,23 @@ include ../Make.defines
 PROGS =	daytimetcpcli daytimetcpcli1 daytimetcpcli2 daytimetcpcli3 \
 		daytimetcpsrv daytimetcpsrv1 daytimetcpsrv2 daytimetcpsrv3 \
 		daytimetcpcliv6 daytimetcpsrvv6 \
+		daytimetcpcli_exam-1_3 daytimetcpcli_exam-1_4 \
+		daytimetcpcli_exam-1_5 daytimetcpsrv_exam-1.5 \
 		byteorder
 
 all:	${PROGS}
+
+daytimetcpcli_exam-1_3:	daytimetcpcli_exam-1_3.o
+		${CC} ${CFLAGS} -o $@ daytimetcpcli_exam-1_3.o ${LIBS}
+
+daytimetcpcli_exam-1_4:	daytimetcpcli_exam-1_4.o
+		${CC} ${CFLAGS} -o $@ daytimetcpcli_exam-1_4.o ${LIBS}
+
+daytimetcpcli_exam-1_5: daytimetcpcli_exam-1_5.o
+		${CC} ${CFLAGS} -o $@ daytimetcpcli_exam-1_5.o ${LIBS}
+
+daytimetcpsrv_exam-1_5: daytimetcpsrv_exam-1.5.o
+		${CC} ${CFLAGS} -o $@ daytimetcpsrv_exam-1.5.o ${LIBS}
 
 daytimetcpcli:	daytimetcpcli.o
 		${CC} ${CFLAGS} -o $@ daytimetcpcli.o ${LIBS}
